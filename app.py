@@ -49,9 +49,10 @@ class Handler(FileSystemEventHandler):
             print(f'Watchdog received {event.event_type} event - {event.src_path}')
             # Set the language
             language = 'EN'
-            # Run the script
-            os.system(f'python ./run_local.py -l {language} {event.src_path} results/')
-
+            # This is the script from AngelinaReader
+            # Edit the Path to run_local.py so the script can be found
+            # Also the results folder path has to be changed, so it matches your results folder path
+            os.system(f'python ./run_local.py -l {language} {event.src_path} /ABSOLUTE/OR/RELATIVE/PATH/TO/INPUT/FOLDER')
 
 if __name__ == '__main__':
     scanner_exe_path = os.getenv("scanner_exe")
@@ -65,5 +66,5 @@ if __name__ == '__main__':
                                stderr=subprocess.PIPE,
                                close_fds=True)
 
-    watch = InputFolderWatcher('input')
+    watch = InputFolderWatcher('/ABSOLUTE/OR/RELATIVE/PATH/TO/INPUT/FOLDER')
     watch.run()
