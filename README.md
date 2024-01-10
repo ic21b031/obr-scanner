@@ -9,18 +9,33 @@ When events occur, it runs a script `run_local.py` and starts a scanner software
 
 ## Table of Contents
 
+- [Requirements](#requirements)
+- [Dependencies](#dependencies)
 - [Installation](#installation)
+- [Installation Steps](#installation-steps)
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
+## Requirements
+
+- Python 3.x
+- `watchdog` library: Install it using `pip install watchdog`
+
+## Dependencies
+
+This project relies on the [AngelinaReader](https://github.com/IlyaOvodov/AngelinaReader) GitHub repository. Ensure it is installed and running before using this script.
+
+Follow the installation instructions for the [AngelinaReader](https://github.com/IlyaOvodov/AngelinaReader) in its repository.
+
+
 ## Installation
 - Python 3.x
 - `watchdog` library: Install it using `pip install watchdog`
 
-## Usage
+## Installation Steps
 
 1. Set up the environment:
    - Ensure you have Python installed.
@@ -30,20 +45,21 @@ When events occur, it runs a script `run_local.py` and starts a scanner software
      ```
 
 2. Set the `scanner_exe` environment variable:
-   - Specify the path to the scanner software executable in the environment variable. For example:
+   - Specify the path to the scanner software executable in the environment variable. \
+   For example:
      ```bash
      export scanner_exe=/path/to/scanner/executable
      ```
 
-3. Run the script:
+## Usage
+Run the script:
    ```bash
    python app.py
-    ```
+   ```
 
 ## Configuration
 Modify the `watch_directory` variable in the script to specify the directory to monitor.
-Adjust the language variable and the script command in the Handler class to fit your requirements.
-
+Adjust the `language` variable and the script command in the `Handler` class to fit your requirements.
 ## Notes
 This script assumes a Unix-like environment.\
 If your operating system is windows set up the environment variable accordingly.
