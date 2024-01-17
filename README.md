@@ -56,6 +56,7 @@ Run the script:
    ```bash
    python app.py
    ```
+The file app.py has to be inside the [AngelinaReader](https://github.com/IlyaOvodov/AngelinaReader) repository, otherwise it doesn't work
 
 ## Configuration
 Modify the `watch_directory` variable in the script to specify the directory to monitor.
